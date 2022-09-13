@@ -22,12 +22,6 @@ cols = ['ID', 'Diagnosis', 'radius', 'texture', 'perimeter', 'area', 'smoothness
         'radius_MAX', 'texture_MAX', 'perimeter_MAX', 'area_MAX', 'smoothness_MAX', 'compactness_MAX', 'concavity_MAX', 'concave_points_MAX', 'symmetry_MAX', 'fractal_dimension_MAX']
 df = pd.read_csv('../../../../Wisconsin_Database/wdbc.data', header=None)
 
-#df = pd.read_csv('../../../../Wisconsin_Database/augmented_wbdc_20000.data')
-#cols = ['Diagnosis', 'radius', 'texture', 'perimeter', 'area', 'smoothness', 'compactness', 'concavity', 'concave_points', 'symmetry', 'fractal_dimension',
-#        'radius_SE', 'texture_SE', 'perimeter_SE', 'area_SE', 'smoothness_SE', 'compactness_SE', 'concavity_SE', 'concave_points_SE', 'symmetry_SE', 'fractal_dimension_SE',
-#        'radius_MAX', 'texture_MAX', 'perimeter_MAX', 'area_MAX', 'smoothness_MAX', 'compactness_MAX', 'concavity_MAX', 'concave_points_MAX', 'symmetry_MAX', 'fractal_dimension_MAX']
-#df.columns = cols
-
 
 df.columns = cols
 df['Diagnosis'] = df['Diagnosis'].map(
@@ -37,6 +31,8 @@ print(df.shape)
 knnScores = []
 naiveBaysScores = []
 logisticRegressionScores = []
+svmRegressionScores = []
+decisionTreeRegressionScores = []
 
 for i in range(100):
     X = df[cols[2:]]
@@ -44,7 +40,7 @@ for i in range(100):
     y = df[cols[1]]
 
     SEED = 42 + i
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.95, random_state=SEED)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=SEED)
     
     scaler = StandardScaler()
     scaler.fit(X_train)
@@ -89,9 +85,27 @@ for i in range(100):
     y_pred = modelLogistic.predict(X_test)
     performanceAccuracy = sum(y_pred == y_test)/len(y_test)
     logisticRegressionScores.append(performanceAccuracy)
-    print('Iteration: {}'.format(i))
 
+    '''SVM'''
+
+    svclassifier = SVC(kernel='linear')
+    svclassifier.fit(X_train, y_train)
+    y_pred = svclassifier.predict(X_test)
+    performanceAccuracy = sum(y_pred == y_test)/len(y_test)
+    svmRegressionScores.append(performanceAccuracy)
+    
+    '''Decision Tree'''
+
+    clf = DecisionTreeClassifier()
+    clf = clf.fit(X_train,y_train)
+    y_pred = clf.predict(X_test)
+    performanceAccuracy = sum(y_pred == y_test)/len(y_test)
+    decisionTreeRegressionScores.append(performanceAccuracy)
+
+    print('Iteration: {}'.format(i))
 
 print('Min: {}, Max: {}, Avg: {}'.format(min(knnScores), max(knnScores), sum(knnScores)/len(knnScores)))
 print('Min: {}, Max: {}, Avg: {}'.format(min(naiveBaysScores), max(naiveBaysScores), sum(naiveBaysScores)/len(naiveBaysScores)))
 print('Min: {}, Max: {}, Avg: {}'.format(min(logisticRegressionScores), max(logisticRegressionScores), sum(logisticRegressionScores)/len(logisticRegressionScores)))
+print('Min: {}, Max: {}, Avg: {}'.format(min(svmRegressionScores), max(svmRegressionScores), sum(svmRegressionScores)/len(svmRegressionScores)))
+print('Min: {}, Max: {}, Avg: {}'.format(min(decisionTreeRegressionScores), max(decisionTreeRegressionScores), sum(decisionTreeRegressionScores)/len(decisionTreeRegressionScores)))
