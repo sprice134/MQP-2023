@@ -1,0 +1,25 @@
+USING:
+    All Columns
+Scored:
+    
+
+
+
+
+
+
+
+USING: 
+    'ID', 'Diagnosis', 'area_MAX','perimeter_MAX','radius_MAX','area',
+    'concave_points_MAX','perimeter','area_SE','radius','concavity_MAX','concavity'
+Scored: 
+    NN - Min: 0.8859649122807017, Max: 0.9824561403508771, Avg: 0.9371052631578937
+        Best Seed: 60
+    NB  - Min: 0.8859649122807017, Max: 0.9736842105263158, Avg: 0.9387719298245603
+        Best Seed: 42
+    LR  - Min: 0.8947368421052632, Max: 0.9824561403508771, Avg: 0.9472807017543851
+        Best Seed: 42
+    SVM - Min: 0.8859649122807017, Max: 0.9912280701754386, Avg: 0.9437719298245604
+        Best Seed: 127
+    DT  - Min: 0.8333333333333334, Max: 0.9736842105263158, Avg: 0.926315789473683
+        Best Seed: 58

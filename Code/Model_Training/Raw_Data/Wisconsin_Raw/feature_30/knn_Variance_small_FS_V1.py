@@ -17,6 +17,7 @@ import warnings #to remove the warnings
 warnings.filterwarnings('ignore')
 
 
+
 cols = ['ID', 'Diagnosis', 'radius', 'texture', 'perimeter', 'area', 'smoothness', 'compactness', 'concavity', 'concave_points', 'symmetry', 'fractal_dimension',
         'radius_SE', 'texture_SE', 'perimeter_SE', 'area_SE', 'smoothness_SE', 'compactness_SE', 'concavity_SE', 'concave_points_SE', 'symmetry_SE', 'fractal_dimension_SE',
         'radius_MAX', 'texture_MAX', 'perimeter_MAX', 'area_MAX', 'smoothness_MAX', 'compactness_MAX', 'concavity_MAX', 'concave_points_MAX', 'symmetry_MAX', 'fractal_dimension_MAX']
@@ -27,6 +28,12 @@ df.columns = cols
 df['Diagnosis'] = df['Diagnosis'].map(
                    {'M':True,'B':False})
 print(df.shape)
+'''columnsToUse = ['ID', 'Diagnosis', 'area_MAX','perimeter_MAX','radius_MAX','area','concave_points_MAX','perimeter','area_SE','radius','concavity_MAX','concavity']
+rawDF = df.copy()
+df = (df[['ID', 'Diagnosis', 'area_MAX','perimeter_MAX','radius_MAX','area','concave_points_MAX','perimeter','area_SE','radius','concavity_MAX','concavity']])
+df = df.drop('smoothness', axis=1)
+'''
+columnsToUse = cols
 
 knnScores = []
 naiveBaysScores = []
@@ -34,13 +41,12 @@ logisticRegressionScores = []
 svmRegressionScores = []
 decisionTreeRegressionScores = []
 
-for i in range(100):
-    X = df[cols[2:]]
-    #X = df[cols[1:]]
-    y = df[cols[1]]
+for i in range(5):
+    X = df[columnsToUse[2:]]
+    y = df[columnsToUse[1]]
 
     SEED = 42 + i
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=SEED)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.40, random_state=SEED)
     
     scaler = StandardScaler()
     scaler.fit(X_train)
@@ -61,7 +67,6 @@ for i in range(100):
         error.append(mae)
         score_vals.append(knn.score(X_test, y_test))
     bestIndex = score_vals.index(max(score_vals)) + 1  #Adds one because it starts with 1 neighbor not 0
-    print(bestIndex)
     regressor = KNeighborsRegressor(n_neighbors=bestIndex)
     regressor.fit(X_train, y_train)
     y_pred = regressor.predict(X_test).round(decimals=0)
@@ -104,8 +109,14 @@ for i in range(100):
 
     print('Iteration: {}'.format(i))
 
-print('Min: {}, Max: {}, Avg: {}'.format(min(knnScores), max(knnScores), sum(knnScores)/len(knnScores)))
-print('Min: {}, Max: {}, Avg: {}'.format(min(naiveBaysScores), max(naiveBaysScores), sum(naiveBaysScores)/len(naiveBaysScores)))
-print('Min: {}, Max: {}, Avg: {}'.format(min(logisticRegressionScores), max(logisticRegressionScores), sum(logisticRegressionScores)/len(logisticRegressionScores)))
-print('Min: {}, Max: {}, Avg: {}'.format(min(svmRegressionScores), max(svmRegressionScores), sum(svmRegressionScores)/len(svmRegressionScores)))
-print('Min: {}, Max: {}, Avg: {}'.format(min(decisionTreeRegressionScores), max(decisionTreeRegressionScores), sum(decisionTreeRegressionScores)/len(decisionTreeRegressionScores)))
+
+print('KNN - Min: {}, Max: {}, Avg: {}'.format(min(knnScores), max(knnScores), sum(knnScores)/len(knnScores)))
+print('   Best Seed: {}'.format(42 + knnScores.index(max(knnScores))))
+print('NB  - Min: {}, Max: {}, Avg: {}'.format(min(naiveBaysScores), max(naiveBaysScores), sum(naiveBaysScores)/len(naiveBaysScores)))
+print('   Best Seed: {}'.format(42 + naiveBaysScores.index(max(naiveBaysScores))))
+print('LR  - Min: {}, Max: {}, Avg: {}'.format(min(logisticRegressionScores), max(logisticRegressionScores), sum(logisticRegressionScores)/len(logisticRegressionScores)))
+print('   Best Seed: {}'.format(42 + logisticRegressionScores.index(max(logisticRegressionScores))))
+print('SVM - Min: {}, Max: {}, Avg: {}'.format(min(svmRegressionScores), max(svmRegressionScores), sum(svmRegressionScores)/len(svmRegressionScores)))
+print('   Best Seed: {}'.format(42 + svmRegressionScores.index(max(svmRegressionScores))))
+print('DT  - Min: {}, Max: {}, Avg: {}'.format(min(decisionTreeRegressionScores), max(decisionTreeRegressionScores), sum(decisionTreeRegressionScores)/len(decisionTreeRegressionScores)))
+print('   Best Seed: {}'.format(42 + decisionTreeRegressionScores.index(max(decisionTreeRegressionScores))))

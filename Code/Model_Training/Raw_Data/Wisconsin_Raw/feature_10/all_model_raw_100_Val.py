@@ -44,7 +44,9 @@ for i in range(100):
     y = df[cols[-1]]
     y=y.astype('int')
     SEED = 42
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.10, random_state=SEED+i)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.40, random_state=SEED+i)
+    if i == 0:
+        print(X_train.shape)
     scaler = StandardScaler()
     scaler.fit(X_train)
     col_names=df.columns[1:-1]
@@ -54,7 +56,7 @@ for i in range(100):
 
     error = []
     score_vals = []
-    for j in range(1, min(len(y_test), len(y_train)) - 1):
+    for j in range(1, 100):
         knn = KNeighborsRegressor(n_neighbors=j)
         knn.fit(X_train, y_train)
         pred_i = knn.predict(X_test)
@@ -62,7 +64,7 @@ for i in range(100):
         error.append(mae)
         score_vals.append(knn.score(X_test, y_test))
     bestIndex = score_vals.index(max(score_vals)) + 1  #Adds one because it starts with 1 neighbor not 0
-
+    print(bestIndex)
     regressor = KNeighborsRegressor(n_neighbors=bestIndex)
     regressor.fit(X_train, y_train)
     y_pred = regressor.predict(X_test)
@@ -110,7 +112,7 @@ results['NB'] = naiveBaysScores
 results['LR'] = logisticRegressionScores
 results['SVM'] = svmRegressionScores
 results['DT'] = decisionTreeRegressionScores
-results.to_csv('allModel90-10Cross100.csv')
+#results.to_csv('allModel90-10Cross100.csv')
 
 print('KNN - Min: {}, Max: {}, Avg: {}'.format(min(knnScores), max(knnScores), sum(knnScores)/len(knnScores)))
 print('   Best Seed: {}'.format(42 + knnScores.index(max(knnScores))))
