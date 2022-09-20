@@ -11,6 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.ensemble import VotingClassifier
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.metrics import confusion_matrix
 import warnings #to remove the warnings
@@ -19,10 +20,6 @@ warnings.filterwarnings('ignore')
 
 
 def trainModels(X_train, X_test, y_train, y_test):
-    naiveBaysScores = []
-    logisticRegressionScores = []
-    svmRegressionScores = []
-    decisionTreeRegressionScores = []
     ''' KNN '''
     
     error = []
@@ -78,7 +75,21 @@ def trainModels(X_train, X_test, y_train, y_test):
     performanceAccuracy = sum(y_pred == y_test)/len(y_test)
     decisionTreeRegressionScores = (performanceAccuracy)
 
-    return knnScores, naiveBaysScores, logisticRegressionScores, svmRegressionScores, decisionTreeRegressionScores
+    '''Voting Classifier'''
+
+    votingCl = VotingClassifier(
+            estimators =    [('gnb', GaussianNB()),
+                             ('lr',  LogisticRegression()),
+                             ('svm', SVC(kernel='linear')),
+                             ('dtc', DecisionTreeClassifier(random_state=42))], 
+            voting='hard')
+    votingCl.fit(X_train, y_train)
+    y_pred = votingCl.predict(X_test)
+    performanceAccuracy = sum(y_pred == y_test)/len(y_test)
+    votingClassifierScore = performanceAccuracy
+
+    return knnScores, naiveBaysScores, logisticRegressionScores, svmRegressionScores, decisionTreeRegressionScores, votingClassifierScore
 
 
 
+#('knn', KNeighborsRegressor(n_neighbors=bestIndex)),
