@@ -14,9 +14,12 @@ from sklearn.svm import SVC
 from sklearn.ensemble import VotingClassifier
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import f1_score
 import warnings #to remove the warnings
 import random
 warnings.filterwarnings('ignore')
+
+
 
 
 def trainModels(X_train, X_test, y_train, y_test):
@@ -64,7 +67,6 @@ def trainModels(X_train, X_test, y_train, y_test):
     svclassifier = SVC(kernel='linear')
     svclassifier.fit(X_train, y_train)
     y_pred = svclassifier.predict(X_test)
-    performanceAccuracy = sum(y_pred == y_test)/len(y_test)
     svmRegressionScores = (performanceAccuracy)
     
     '''Decision Tree'''
