@@ -16,8 +16,10 @@ from sklearn.metrics import confusion_matrix
 import warnings #to remove the warnings
 import random
 import sys
-sys.path.append('../_hepers_')
+sys.path.append('../../_hepers_')
 from genNewVals import *
+from numpy.random import randint
+import math
 
 warnings.filterwarnings('ignore')
 
@@ -47,6 +49,30 @@ def genSyntheticFillNulls(df):
         temp.append(listWithNulls)
     return pd.DataFrame(np.array(temp).T, columns=df.columns)
 
+
+def genSyntheticFillNullsNone(df):
+    temp = []
+    for i in df.columns:
+        listWithNulls = df[i]
+        numNulls = np.isnan(list(listWithNulls)).sum()
+        print(numNulls)
+        nonNullColumn = listWithNulls[~np.isnan(listWithNulls)]
+        hist, bins = np.histogram(nonNullColumn, bins=25)
+        bin_midpoints = bins[:-1] + np.diff(bins)/2
+        cdf = np.cumsum(hist)
+        cdf = cdf / cdf[-1]
+        values = np.random.rand(numNulls)
+        value_bins = np.searchsorted(cdf, values)
+        random_from_cdf = bin_midpoints[value_bins]
+
+        count = 0
+        for j in range(len(listWithNulls)):
+            if np.isnan(listWithNulls[j]):
+                listWithNulls[j] = random_from_cdf[count]
+                count += 1
+        temp.append(listWithNulls)
+    return pd.DataFrame(np.array(temp).T, columns=df.columns)
+
 def removeEntriesWithNulls(df):
     temp = []
     for index, row in df.iterrows():
@@ -56,3 +82,15 @@ def removeEntriesWithNulls(df):
     for i in resultantDF.columns:
         resultantDF[i] = resultantDF[i].astype(np.float)
     return resultantDF
+
+def createNullValues(df, percentNull, printOutput = False):
+    for i in df:
+        modifyingList =  np.array(df[i])
+        indexesToDelete = np.array(list(set(randint(0, len(modifyingList), math.floor(len(modifyingList) * percentNull)))))
+        noneList = [None] * len(indexesToDelete)
+        np.put(modifyingList, indexesToDelete, noneList)
+        df[i] = modifyingList
+    if printOutput:
+        for i in df:
+            print('{}: {}'.format(i, df[i].isna().sum()))
+    return df
