@@ -1,0 +1,235 @@
+-1
+Final Dataset Composition: (888, 10)
+ - Benign:
+   -   New Benign Instances Created: 0
+   -   Old Benign Instances Used: 444
+ - Malignant:
+   -   New Malignant Instances Created: 205
+   -   Old Malignant Instances Used: 239
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9702172486517755
+LR Mean Scores: 0.978508764324731
+SVM Mean Scores: 0.976391764893212
+DT Mean Scores: 0.9532127158959771
+VC Mean Scores: 0.9774906659921131
+------------------------------
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9644141871301887
+LR Mean Scores: 0.9660464651519189
+SVM Mean Scores: 0.9708025595169572
+DT Mean Scores: 0.9604697142214047
+VC Mean Scores: 0.9707497053943357
+------------------------------
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9456638262506314
+LR Mean Scores: 0.9537830712303423
+SVM Mean Scores: 0.9519177506340186
+DT Mean Scores: 0.9313956713120032
+VC Mean Scores: 0.9519177506340186
+----------------------------------------------------------------------------------------------------
+0.3
+X: 444, Y: 239, Total: 683, SubY: 134
+Final Dataset Composition: (888, 10)
+ - Benign:
+   -   New Benign Instances Created: 0
+   -   Old Benign Instances Used: 444
+ - Malignant:
+   -   New Malignant Instances Created: 310
+   -   Old Malignant Instances Used: 134
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9725292640279999
+LR Mean Scores: 0.9752294150384948
+SVM Mean Scores: 0.977638064143686
+DT Mean Scores: 0.956567527331275
+VC Mean Scores: 0.9752294150384948
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 134
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9611902866714788
+LR Mean Scores: 0.9718002553647652
+SVM Mean Scores: 0.9765718464350609
+DT Mean Scores: 0.9698234273625375
+VC Mean Scores: 0.975352163442051
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 134
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9106121575865735
+LR Mean Scores: 0.925621054552089
+SVM Mean Scores: 0.9235881155881156
+DT Mean Scores: 0.9086864235769785
+VC Mean Scores: 0.9301701261701263
+----------------------------------------------------------------------------------------------------
+0.2
+X: 444, Y: 239, Total: 683, SubY: 89
+Final Dataset Composition: (888, 10)
+ - Benign:
+   -   New Benign Instances Created: 0
+   -   Old Benign Instances Used: 444
+ - Malignant:
+   -   New Malignant Instances Created: 355
+   -   Old Malignant Instances Used: 89
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9726311781366965
+LR Mean Scores: 0.9764289485686654
+SVM Mean Scores: 0.978889966341938
+DT Mean Scores: 0.9442572500132614
+VC Mean Scores: 0.9764536429753822
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 89
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9494955105164327
+LR Mean Scores: 0.9684521860248323
+SVM Mean Scores: 0.9722259052351871
+DT Mean Scores: 0.9672028290277032
+VC Mean Scores: 0.9684521860248323
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 89
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.8770965952430483
+LR Mean Scores: 0.9058167812579578
+SVM Mean Scores: 0.9070680712476378
+DT Mean Scores: 0.8749210369953403
+VC Mean Scores: 0.912400028591979
+----------------------------------------------------------------------------------------------------
+0.1
+X: 444, Y: 239, Total: 683, SubY: 45
+Final Dataset Composition: (888, 10)
+ - Benign:
+   -   New Benign Instances Created: 0
+   -   Old Benign Instances Used: 444
+ - Malignant:
+   -   New Malignant Instances Created: 399
+   -   Old Malignant Instances Used: 45
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9749558584931475
+LR Mean Scores: 0.9809846275785127
+SVM Mean Scores: 0.9821823620446128
+DT Mean Scores: 0.94507749808678
+VC Mean Scores: 0.9821823620446128
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 45
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9658738540149248
+LR Mean Scores: 0.9786683142366446
+SVM Mean Scores: 0.9755480694850336
+DT Mean Scores: 0.9787420964356093
+VC Mean Scores: 0.9786683142366446
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 45
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.7909973359973359
+LR Mean Scores: 0.8516233766233766
+SVM Mean Scores: 0.7872222222222222
+DT Mean Scores: 0.741919191919192
+VC Mean Scores: 0.7947979797979798
+----------------------------------------------------------------------------------------------------
+0.05
+X: 444, Y: 239, Total: 683, SubY: 23
+Final Dataset Composition: (888, 10)
+ - Benign:
+   -   New Benign Instances Created: 0
+   -   Old Benign Instances Used: 444
+ - Malignant:
+   -   New Malignant Instances Created: 421
+   -   Old Malignant Instances Used: 23
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9772022263574929
+LR Mean Scores: 0.9800216383556176
+SVM Mean Scores: 0.982294384766295
+DT Mean Scores: 0.9706369562549337
+VC Mean Scores: 0.982294384766295
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 23
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9680770803315992
+LR Mean Scores: 0.9821925681694393
+SVM Mean Scores: 0.9790150880214121
+DT Mean Scores: 0.9764449121060143
+VC Mean Scores: 0.9810692661840685
+------------------------------
+X: 444, Y: 239, Total: 683, SubY: 23
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.7006349206349206
+LR Mean Scores: 0.6666666666666667
+SVM Mean Scores: 0.75
+DT Mean Scores: 0.6333333333333333
+VC Mean Scores: 0.7233333333333334
+----------------------------------------------------------------------------------------------------
+RAW DATA
+[0.9456638262506314, 0.9537830712303423, 0.9519177506340186, 0.9313956713120032, 0.9519177506340186] -> 0.9469
+[0.9106121575865735, 0.925621054552089, 0.9235881155881156, 0.9086864235769785, 0.9301701261701263] -> 0.9197
+[0.8770965952430483, 0.9058167812579578, 0.9070680712476378, 0.8749210369953403, 0.912400028591979] -> 0.8955
+[0.7909973359973359, 0.8516233766233766, 0.7872222222222222, 0.741919191919192, 0.7947979797979798] -> 0.7933
+[0.7006349206349206, 0.6666666666666667, 0.75, 0.6333333333333333, 0.7233333333333334] -> 0.6948
+SMOTE DATA
+[0.9644141871301887, 0.9660464651519189, 0.9708025595169572, 0.9604697142214047, 0.9707497053943357] -> 0.9665
+[0.9611902866714788, 0.9718002553647652, 0.9765718464350609, 0.9698234273625375, 0.975352163442051] -> 0.9709
+[0.9494955105164327, 0.9684521860248323, 0.9722259052351871, 0.9672028290277032, 0.9684521860248323] -> 0.9652
+[0.9658738540149248, 0.9786683142366446, 0.9755480694850336, 0.9787420964356093, 0.9786683142366446] -> 0.9755
+[0.9680770803315992, 0.9821925681694393, 0.9790150880214121, 0.9764449121060143, 0.9810692661840685] -> 0.9774
+Synthetic DATA
+[0.9702172486517755, 0.978508764324731, 0.976391764893212, 0.9532127158959771, 0.9774906659921131] -> 0.9712
+[0.9725292640279999, 0.9752294150384948, 0.977638064143686, 0.956567527331275, 0.9752294150384948] -> 0.9714
+[0.9726311781366965, 0.9764289485686654, 0.978889966341938, 0.9442572500132614, 0.9764536429753822] -> 0.9697
+[0.9749558584931475, 0.9809846275785127, 0.9821823620446128, 0.94507749808678, 0.9821823620446128] -> 0.9731
+[0.9772022263574929, 0.9800216383556176, 0.982294384766295, 0.9706369562549337, 0.982294384766295] -> 0.9785
