@@ -1,0 +1,45 @@
+Num Samples: 14635, Num Positive: 3690.0
+(14635, 25)
+(14635, 25)
+(10505, 25)
+Benign: (10945, 24), Benign w/o Nulls: (7970, 24)
+Malig: (3690, 24), Malig w/o Nulls: (2685, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.7312878688942299
+LR Mean Scores: 0.7312828271144254
+SVM Mean Scores: 0.7361618306772325
+DT Mean Scores: 0.7633688378805366
+VC Mean Scores: 0.7391380151857192
+Num Samples: 14635, Num Positive: 3690.0
+(14635, 25)
+(14635, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.7462946193430818
+LR Mean Scores: 0.7466957724550733
+SVM Mean Scores: 0.7616462872544084
+DT Mean Scores: 0.7243822474896456
+VC Mean Scores: 0.7543971839414313
+Num Samples: 14635, Num Positive: 3690.0
+(14635, 25)
+(14635, 25)
+(10505, 25)
+Benign: (10945, 24), Benign w/o Nulls: (7970, 24)
+Malig: (3690, 24), Malig w/o Nulls: (2685, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.7304579625168225
+LR Mean Scores: 0.7313494406232255
+SVM Mean Scores: 0.7351649742017463
+DT Mean Scores: 0.758880692262655
+VC Mean Scores: 0.737647164359087

@@ -9,4 +9,4 @@
 #SBATCH --account=wpi102
 #SBATCH -t 08:00:00
 
-python augmentationImbalanceF1CrossVal_Modular.py
+python augmentationNullF1CrossVal.py
