@@ -7,6 +7,6 @@
 #SBATCH --gpus=1
 #SBATCH --mem=250g
 #SBATCH --account=wpi102
-#SBATCH -t 08:00:00
+#SBATCH -t 16:00:00
 
-python augmentationNullF1CrossVal.py
+python augmentationImbalanceF1CrossVal_Modular.py

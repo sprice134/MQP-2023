@@ -295,10 +295,10 @@ def calculateSurgical(percentY, typeOfBalance):
     df, cols = prepSurgical()
     X = df[cols[:-1]]
     y = df[cols[-1]]
-    numY = int(math.ceil(percentY * 5000 / (1 - percentY))) #Extra care do to subsampling both due to computational time
+    numY = int(math.ceil(percentY * 10000 / (1 - percentY))) #Extra care do to subsampling both due to computational time
     if leaveRAW == False: #Only subsample if leaveRaw is false
         print('X: {}, Y: {}, Total: {}, SubY: {}'.format(len(y) - sum(y), sum(y), len(y), numY))
-        subSample = pd.DataFrame(subsample(X, y, 5000, numY)) #Extra care do to subsampling both due to computational time
+        subSample = pd.DataFrame(subsample(X, y, 10000, numY)) #Extra care do to subsampling both due to computational time
         X, y = subSample[subSample.columns[:-1]], subSample[subSample.columns[-1]]
         print(X.shape)
     if typeOfBalance == 'SYN':
