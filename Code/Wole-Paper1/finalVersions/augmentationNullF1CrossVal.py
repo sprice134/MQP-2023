@@ -308,13 +308,12 @@ def prepCervical():
         df[i] = df[i].astype(np.float)
     return df, cols
 
+iterativeMeanSurgical = []
+iterativeRemovalSurgical = []
+iterativeSynSurgical = []
 
-
-
-
-
-for removalAmount in range([0.1, 0.33, 0.5, 0.66, 0.75, 0.8]):
-    print('NEW ORDERING: {}'.format(i))
+for removalValue in ([0.1, 0.33, 0.5, 0.66, 0.9]):
+    print('NEW ORDERING: {}'.format(removalValue))
     print('-'*50)
 
     random.seed(42)
@@ -324,80 +323,82 @@ for removalAmount in range([0.1, 0.33, 0.5, 0.66, 0.75, 0.8]):
     cols = df.columns
     for i in df:
         df[i] = df[i].astype(np.float)
-    print('Num Samples: {}, Num Positive: {}'.format(len(df['Diagnosis']), sum(df['Diagnosis'])))
-    df, cols = removeAtRandom(df, cols, removalAmount)
+    subSample = df.sample(5000)
+    df, cols = removeAtRandom(subSample, cols, removalValue)
+    print(df.dropna().shape)
+    bening_imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+    bening_imputer = bening_imputer.fit(df)
+    df = pd.DataFrame(bening_imputer.transform(df), columns=cols)
+    print('New DF Shape: {}'.format(df.shape))
+    X = df[df.columns[:-1]]
+    y = df[df.columns[-1]]
+    for i in finalDataset:
+        finalDataset[i] = finalDataset[i].astype(np.int)
+    X = finalDataset[finalDataset.columns[:-1]]
+    y = finalDataset[finalDataset.columns[-1]]
+
+    temp = trainF1CrossValModels(X, y, 10)
+    iterativeRemovalSurgical.append(temp)
+    removeNBSurgical, removeLogSurgical, removeSVMSurgical, removeDTSurgical, removeVoteSurgical = temp
+    printOutputs(removeNBSurgical, removeLogSurgical, removeSVMSurgical, removeDTSurgical, removeVoteSurgical)
+    
+
+    print('-' * 25)
+
+
+    random.seed(42)
+    np.random.seed(42)
+    df = pd.read_csv('Surgical-deepnet.csv')
+    df.rename(columns = {'complication':'Diagnosis'}, inplace = True)
+    cols = df.columns
+    for i in df:
+        df[i] = df[i].astype(np.float)
+    print(df)
+    subSample = df.sample(5000)
+    df, cols = removeAtRandom(subSample, cols, removalValue)
+    print(df.dropna().shape)
+    bening_imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+    bening_imputer = bening_imputer.fit(df)
+    df = pd.DataFrame(bening_imputer.transform(df), columns=cols)
+    print('New DF Shape: {}'.format(df.shape))
+    X = df[df.columns[:-1]]
+    y = df[df.columns[-1]]
+    for i in finalDataset:
+        finalDataset[i] = finalDataset[i].astype(np.int)
+    X = finalDataset[finalDataset.columns[:-1]]
+    y = finalDataset[finalDataset.columns[-1]]
+    temp = trainF1CrossValModels(X, y, 10)
+    iterativeMeanSurgical.append(temp)
+    meanNBSurgical, meanLogSurgical, meanSVMSurgical, meanDTSurgical, meanVoteSurgical = trainF1CrossValModels(X, y, 10)
+    printOutputs(meanNBSurgical, meanLogSurgical, meanSVMSurgical, meanDTSurgical, meanVoteSurgical)
+
+
+    print('-'*25)
+    
+
+    random.seed(42)
+    np.random.seed(42)
+    df = pd.read_csv('Surgical-deepnet.csv')
+    df.rename(columns = {'complication':'Diagnosis'}, inplace = True)
+    cols = df.columns
+    for i in df:
+        df[i] = df[i].astype(np.float)
+
+    subSample = df.sample(5000)
+    df, cols = removeAtRandom(subSample, cols, removalValue)
     print(df.dropna().shape)
     X = df[cols[1:-1]]
     y = df[cols[-1]]
+
     finalDataset = pd.DataFrame(syntheticImputaitonByClass(X, y))
     finalDataset.columns = cols[1:]
     for i in finalDataset:
         finalDataset[i] = finalDataset[i].astype(np.int)
     X = finalDataset[finalDataset.columns[:-1]]
     y = finalDataset[finalDataset.columns[-1]]
-    sm = SMOTE(random_state=42)
-    X, y = sm.fit_resample(X, y)
 
-
+    temp = trainF1CrossValModels(X, y, 10)
+    iterativeMeanSurgical.append(temp) 
     synNBSurgical, synLogSurgical, synSVMSurgical, synDTSurgical, synVoteSurgical = trainF1CrossValModels(X, y, 10)
     printOutputs(synNBSurgical, synLogSurgical, synSVMSurgical, synDTSurgical, synVoteSurgical)
-
-
-
-
-
-
-
-    random.seed(42)
-    np.random.seed(42)
-    df = pd.read_csv('Surgical-deepnet.csv')
-    df.rename(columns = {'complication':'Diagnosis'}, inplace = True)
-    cols = df.columns
-    for i in df:
-        df[i] = df[i].astype(np.float)
-    print('Num Samples: {}, Num Positive: {}'.format(len(df['Diagnosis']), sum(df['Diagnosis'])))
-    df, cols = removeAtRandom(df, cols, removalAmount)
-
-    finalDataset = df.dropna()
-
-    for i in finalDataset:
-        finalDataset[i] = finalDataset[i].astype(np.int)
-    X = finalDataset[finalDataset.columns[:-1]]
-    y = finalDataset[finalDataset.columns[-1]]
-    sm = SMOTE(random_state=42)
-    X, y = sm.fit_resample(X, y)
-
-    rawNBSurgical, rawLogSurgical, rawSVMSurgical, rawDTSurgical, rawVoteSurgical = trainF1CrossValModels(X, y, 10)
-    printOutputs(rawNBSurgical, rawLogSurgical, rawSVMSurgical, rawDTSurgical, rawVoteSurgical)
-
-
-
-
-
-    random.seed(42)
-    np.random.seed(42)
-    df = pd.read_csv('Surgical-deepnet.csv')
-    df.rename(columns = {'complication':'Diagnosis'}, inplace = True)
-    cols = df.columns
-    for i in df:
-        df[i] = df[i].astype(np.float)
-    print('Num Samples: {}, Num Positive: {}'.format(len(df['Diagnosis']), sum(df['Diagnosis'])))
-    df, cols = removeAtRandom(df, cols, removalAmount)
-    print(df.dropna().shape)
-    X = df[cols[1:-1]]
-    y = df[cols[-1]]
-    finalDataset = pd.DataFrame(meanImputationByClass(X, y))
-    finalDataset.columns = cols[1:]
-    for i in finalDataset:
-        finalDataset[i] = finalDataset[i].astype(np.int)
-    X = finalDataset[finalDataset.columns[:-1]]
-    y = finalDataset[finalDataset.columns[-1]]
-    sm = SMOTE(random_state=42)
-    X, y = sm.fit_resample(X, y)
-
-
-    meanNBSurgical, meanLogSurgical, meanSVMSurgical, meanDTSurgical, meanVoteSurgical = trainF1CrossValModels(X, y, 10)
-    printOutputs(meanNBSurgical, meanLogSurgical, meanSVMSurgical, meanDTSurgical, meanVoteSurgical)
-
-
 
