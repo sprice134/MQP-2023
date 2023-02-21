@@ -1,0 +1,719 @@
+Surgical Datasets
+NEW ORDERING: 0.1
+--------------------------------------------------
+(5000, 25)
+(5000, 25)
+New DF Shape: (4521, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.45564781885275085
+LR Mean Scores: 0.3428249175617771
+SVM Mean Scores: 0.36968696473391227
+DT Mean Scores: 0.5922633037756169
+VC Mean Scores: 0.38555186458222557
+
+Avg = 0.42919497390126
+-------------------------
+(5000, 25)
+(5000, 25)
+(4521, 25)
+New DF Shape: (5000, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.468713564256422
+LR Mean Scores: 0.3703567319960065
+SVM Mean Scores: 0.4174869295087554
+DT Mean Scores: 0.6941179605941583
+VC Mean Scores: 0.4318036465919174
+
+Avg = 0.47649576658945
+-------------------------
+(5000, 25)
+(5000, 25)
+(4521, 25)
+Benign: (3774, 24), Benign w/o Nulls: (3433, 24)
+Malig: (1226, 24), Malig w/o Nulls: (1102, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.31587821481100575
+LR Mean Scores: 0.26692156314231147
+SVM Mean Scores: 0.07119879317214692
+DT Mean Scores: 0.5709332829787738
+VC Mean Scores: 0.20179933553740326
+
+AVG = 0.28534623792833
+
+
+
+NEW ORDERING: 0.33
+--------------------------------------------------
+(5000, 25)
+(5000, 25)
+New DF Shape: (3585, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.4634700346173658
+LR Mean Scores: 0.3615169915103496
+SVM Mean Scores: 0.3823434683866908
+DT Mean Scores: 0.5687370409865921
+VC Mean Scores: 0.392382788232687
+
+AVG = 0.43369006474674
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(3585, 25)
+New DF Shape: (5000, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.4660127055367778
+LR Mean Scores: 0.3814952071010433
+SVM Mean Scores: 0.41397004309446583
+DT Mean Scores: 0.6701384756688828
+VC Mean Scores: 0.4187000974484194
+
+AVG = 0.47006330576992
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(3585, 25)
+Benign: (3774, 24), Benign w/o Nulls: (2750, 24)
+Malig: (1226, 24), Malig w/o Nulls: (879, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.3191638067894801
+LR Mean Scores: 0.27832663278164166
+SVM Mean Scores: 0.08739869778646234
+DT Mean Scores: 0.568594621529419
+VC Mean Scores: 0.2131378396656678
+
+
+AVG = 0.29332431971053
+
+
+NEW ORDERING: 0.5
+--------------------------------------------------
+
+(5000, 25)
+(5000, 25)
+New DF Shape: (3022, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.4746884981530555
+LR Mean Scores: 0.3531502041958945
+SVM Mean Scores: 0.3582798426092447
+DT Mean Scores: 0.5784117825346302
+VC Mean Scores: 0.38842602148729194
+
+
+AVG = 0.43059126979602
+
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(3022, 25)
+New DF Shape: (5000, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.46672011399581476
+LR Mean Scores: 0.3721665982956491
+SVM Mean Scores: 0.4111398892386573
+DT Mean Scores: 0.6664321810250038
+VC Mean Scores: 0.41268092167251746
+
+
+AVG = 0.46582794084553
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(3022, 25)
+Benign: (3774, 24), Benign w/o Nulls: (2311, 24)
+Malig: (1226, 24), Malig w/o Nulls: (766, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.32657750449556483
+LR Mean Scores: 0.27540107561193555
+SVM Mean Scores: 0.04691189867303978
+DT Mean Scores: 0.5655124505867543
+VC Mean Scores: 0.1980024340927991
+
+
+AVG = 0.28248107269202
+
+
+NEW ORDERING: 0.66
+
+--------------------------------------------------
+(5000, 25)
+(5000, 25)
+New DF Shape: (2595, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.3928750808203433
+LR Mean Scores: 0.3617697767035317
+SVM Mean Scores: 0.3419946053409745
+DT Mean Scores: 0.564791848239404
+VC Mean Scores: 0.32958149897395445
+
+AVG = 0.39820256201564
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(2595, 25)
+New DF Shape: (5000, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.46673206835915426
+LR Mean Scores: 0.3687829372158803
+SVM Mean Scores: 0.4031925673262154
+DT Mean Scores: 0.6655413438037701
+VC Mean Scores: 0.4106516294799859
+
+AVG = 0.44283021012413
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(2595, 25)
+Benign: (3774, 24), Benign w/o Nulls: (1997, 24)
+Malig: (1226, 24), Malig w/o Nulls: (656, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.3221106489315425
+LR Mean Scores: 0.2810610299289642
+SVM Mean Scores: 0.06661895903029699
+DT Mean Scores: 0.562509858051504
+VC Mean Scores: 0.21259834463647884
+
+AVG = 0.28897976811576
+
+
+
+NEW ORDERING: 0.9
+--------------------------------------------------
+(5000, 25)
+(5000, 25)
+New DF Shape: (2032, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.40400061268505993
+LR Mean Scores: 0.37381928385969915
+SVM Mean Scores: 0.3288678378878693
+DT Mean Scores: 0.5552610483176104
+VC Mean Scores: 0.33591576660752814
+
+AVG = 0.39957290987155
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(2032, 25)
+New DF Shape: (5000, 25)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.46481781934739175
+LR Mean Scores: 0.37069169528993906
+SVM Mean Scores: 0.4054157708792645
+DT Mean Scores: 0.6638223766469641
+VC Mean Scores: 0.4114050727390299
+
+AVG = 0.46323054698052
+
+-------------------------
+(5000, 25)
+(5000, 25)
+(2032, 25)
+Benign: (3774, 24), Benign w/o Nulls: (1594, 24)
+Malig: (1226, 24), Malig w/o Nulls: (513, 24)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.3218885908355638
+LR Mean Scores: 0.2840725629751202
+SVM Mean Scores: 0.0799264478459526
+DT Mean Scores: 0.5419334816374891
+VC Mean Scores: 0.20480228052985372
+
+AVG = 0.2865246727648
+
+
+
+NB Mean Scores: 0.40400061268505993
+LR Mean Scores: 0.37381928385969915
+SVM Mean Scores: 0.3288678378878693
+DT Mean Scores: 0.5552610483176104
+VC Mean Scores: 0.33591576660752814
+
+NB Mean Scores: 0.46481781934739175
+LR Mean Scores: 0.37069169528993906
+SVM Mean Scores: 0.4054157708792645
+DT Mean Scores: 0.6638223766469641
+VC Mean Scores: 0.4114050727390299
+
+NB Mean Scores: 0.3218885908355638
+LR Mean Scores: 0.2840725629751202
+SVM Mean Scores: 0.0799264478459526
+DT Mean Scores: 0.5419334816374891
+VC Mean Scores: 0.20480228052985372
+
+removal = [0.4040, 0.3738, 0.3289, 0.5526, 0.3359]
+mean = [0.4648, 0.3707, 0.4054, 0.6638, 0.4114]
+dbPac = [0.3219, 0.2841, 0.0799, 0.5419, 0.2048]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WDBC
+NEW ORDERING: 0.1
+--------------------------------------------------
+(569, 31)
+(569, 31)
+(512, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.916730551496088
+LR Mean Scores: 0.9167569391253603
+SVM Mean Scores: 0.9387958809011441
+DT Mean Scores: 0.8951855711740178
+VC Mean Scores: 0.9287290267166428
+
+Avg (without NB) = 0.91986685447929
+
+-------------------------
+(569, 31)
+(569, 31)
+New DF Shape: (569, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9122090677629979
+LR Mean Scores: 0.9146652081138752
+SVM Mean Scores: 0.9399380147372506
+DT Mean Scores: 0.9082143808195005
+VC Mean Scores: 0.935412716419523
+
+Avg (without NB) = 0.92455758002254
+
+-------------------------
+(569, 31)
+(569, 31)
+(512, 31)
+Benign: (357, 31), Benign w/o Nulls: (319, 31)
+Malig: (212, 31), Malig w/o Nulls: (193, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.846764023869287
+LR Mean Scores: 0.9181369098107911
+SVM Mean Scores: 0.936009397106958
+DT Mean Scores: 0.8933752579457777
+VC Mean Scores: 0.8998462717589802
+
+Avg (without NB) = 0.91184195915563
+
+NEW ORDERING: 0.33
+--------------------------------------------------
+(569, 31)
+(569, 31)
+(381, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9099385850420333
+LR Mean Scores: 0.9051110830421175
+SVM Mean Scores: 0.9417460317460318
+DT Mean Scores: 0.9285797089245366
+VC Mean Scores: 0.9355376475376476
+
+Avg (without NB) = 0.92774361781258
+
+-------------------------
+(569, 31)
+(569, 31)
+New DF Shape: (569, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9148517738940761
+LR Mean Scores: 0.8957123189734675
+SVM Mean Scores: 0.9370436714174959
+DT Mean Scores: 0.898483325617472
+VC Mean Scores: 0.932306481022336
+
+Avg (without NB) = 0.91588644925769
+
+-------------------------
+(569, 31)
+(569, 31)
+(381, 31)
+Benign: (357, 31), Benign w/o Nulls: (241, 31)
+Malig: (212, 31), Malig w/o Nulls: (140, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.846764023869287
+LR Mean Scores: 0.9098838837670673
+SVM Mean Scores: 0.939218131399073
+DT Mean Scores: 0.8760921491419161
+VC Mean Scores: 0.9006361045192881
+
+Avg (without NB) = 0.90645756720684
+
+NEW ORDERING: 0.5
+--------------------------------------------------
+(569, 31)
+(569, 31)
+(284, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9100402521455153
+LR Mean Scores: 0.8988023088023087
+SVM Mean Scores: 0.9118295739348371
+DT Mean Scores: 0.8942582741438576
+VC Mean Scores: 0.9108521303258146
+
+Avg (without NB) = 0.9039355718017
+
+-------------------------
+(569, 31)
+(569, 31)
+New DF Shape: (569, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.91433027988421
+LR Mean Scores: 0.8865934504584171
+SVM Mean Scores: 0.9395203340807425
+DT Mean Scores: 0.9088474522075976
+VC Mean Scores: 0.9349377927999896
+
+Avg (without NB) = 0.91747475738669
+
+
+-------------------------
+(569, 31)
+(569, 31)
+(284, 31)
+Benign: (357, 31), Benign w/o Nulls: (179, 31)
+Malig: (212, 31), Malig w/o Nulls: (105, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.8540367511420142
+LR Mean Scores: 0.8897749990603081
+SVM Mean Scores: 0.9185065538257972
+DT Mean Scores: 0.8967372145748925
+VC Mean Scores: 0.9034977303398357
+
+Avg (without NB) = 0.90212912445021
+
+
+NEW ORDERING: 0.66
+--------------------------------------------------
+(569, 31)
+(569, 31)
+(193, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9051648351648351
+LR Mean Scores: 0.9184701572936866
+SVM Mean Scores: 0.9149450549450548
+DT Mean Scores: 0.9145818070818071
+VC Mean Scores: 0.9504029304029304
+
+Avg (without NB) = 0.92459998743087
+
+-------------------------
+(569, 31)
+(569, 31)
+New DF Shape: (569, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9138621924790835
+LR Mean Scores: 0.8792930996022317
+SVM Mean Scores: 0.9322608951089114
+DT Mean Scores: 0.8959548367158913
+VC Mean Scores: 0.9273647560806111
+
+Avg (without NB) = 0.90871839687691
+
+-------------------------
+(569, 31)
+(569, 31)
+(193, 31)
+Benign: (357, 31), Benign w/o Nulls: (120, 31)
+Malig: (212, 31), Malig w/o Nulls: (73, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.857143976013945
+LR Mean Scores: 0.882898157932749
+SVM Mean Scores: 0.9067146499001589
+DT Mean Scores: 0.8767625090177857
+VC Mean Scores: 0.8968428133250356
+
+Avg (without NB) = 0.89080453254393
+
+NEW ORDERING: 0.9
+--------------------------------------------------
+(569, 31)
+(569, 31)
+(56, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.8966666666666667
+LR Mean Scores: 0.8733333333333333
+SVM Mean Scores: 0.8666666666666666
+DT Mean Scores: 0.7966666666666666
+VC Mean Scores: 0.8999999999999998
+
+Avg (without NB) = 0.85916666666667
+
+-------------------------
+(569, 31)
+(569, 31)
+New DF Shape: (569, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.9111791674307721
+LR Mean Scores: 0.8579282185508117
+SVM Mean Scores: 0.93014797926596
+DT Mean Scores: 0.9084559200688258
+VC Mean Scores: 0.9296996975618942
+
+Avg (without NB) = 0.90655795386187
+
+-------------------------
+(569, 31)
+(569, 31)
+(56, 31)
+Benign: (357, 31), Benign w/o Nulls: (35, 31)
+Malig: (212, 31), Malig w/o Nulls: (21, 31)
+Completed Naive Bayes
+Completed Logistic Regression
+Completed SVM
+Completed Decision Tree
+Completed Voting Classification
+NB Mean Scores: 0.8778936666545214
+LR Mean Scores: 0.8795000707365993
+SVM Mean Scores: 0.9356280169694802
+DT Mean Scores: 0.9000162961762508
+VC Mean Scores: 0.9120364863368714
+
+Avg (without NB) = 0.9067952175548
+
+
+
+removal = 0.90706253963822
+mean = 0.91463902748114
+dbpac = 0.90360568018228
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Surgical Results
+----------------
+0.42919497390126
+0.47649576658945
+0.28534623792833
+
+0.43369006474674
+0.47006330576992
+0.29332431971053
+
+0.43059126979602
+0.46582794084553
+0.28248107269202
+
+0.39820256201564
+0.44283021012413
+0.28897976811576
+
+0.39957290987155
+0.46323054698052
+0.2865246727648
+
+
+
+WDBC
+---------------
+0.91986685447929
+0.92455758002254
+0.91184195915563
+
+0.92774361781258
+0.91588644925769
+0.90645756720684
+
+0.9039355718017
+0.91747475738669
+0.90212912445021
+
+0.92459998743087
+0.90871839687691
+0.89080453254393
+
+0.85916666666667
+0.90655795386187
+0.9067952175548
